@@ -16,7 +16,7 @@ html, body {
 
 .container {
     position: relative;
-    width: 100%;
+    min-width: 625px;
     margin: auto;
     left: 0;
     right: 0;
@@ -78,8 +78,8 @@ html, body {
 }
 
 .glasspane{
-    width: 60vh;
-    min-width: 650px;
+    /* width: 60vh; */
+    min-width: 625px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,7 +96,7 @@ html, body {
     border-right: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
     margin-top: 20px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .center-text{
