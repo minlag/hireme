@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
     font-family: futuraboldoblique;
     src: url(helveticabold.ttf);
   }
@@ -15,15 +15,13 @@ html, body {
  } 
 
 .container {
-    position: relative;
-    min-width: 625px;
+    position: fixed;
+    width: 100vw;
+    height: 105vh; /*prevent artifact on bottom of glass */
     margin: auto;
-    left: 0;
-    right: 0;
     top: 0;
     bottom: 0;
-    border-radius: 1px;
-    overflow: hidden;
+    z-index: 0;
  }
 .container div{
     position: absolute;
@@ -78,25 +76,21 @@ html, body {
 }
 
 .glasspane{
-    /* width: 60vh; */
+    width: 625px;
     min-width: 625px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: auto;
     padding: 5px 10px;
     background: rgba(255,255,255,0.1);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     backdrop-filter: blur(5px);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border: 1px solid rgba(255,255,255,0.5);
     border-right: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    margin-top: 20px;
-    overflow: auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    z-index: 1;
 }
 
 .center-text{
@@ -117,11 +111,13 @@ html, body {
 .center-text h1{
     font-size: 6em;
     color: white;
+    margin-top: 40px;
 }
 
 .btn {
     background: rgba(118, 110, 238, 0.712);
     padding: 15px 25px 5px 25px;
+    margin-bottom: 30px;
     height: 50px;
     margin: 10px;
     border-radius: 50px;
@@ -137,3 +133,4 @@ html, body {
   .btn:hover {
     background-color: rgba(255,255,255,0.2);
   }
+
